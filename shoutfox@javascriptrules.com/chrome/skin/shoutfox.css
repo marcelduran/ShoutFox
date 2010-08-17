@@ -1,0 +1,5 @@
+#shoutfox-statusbar-button { 
+  list-style-image: url("chrome://shoutfox/content/statusbar.png");
+}
+
+.post {font-size:1em; border:1px solid gray;}

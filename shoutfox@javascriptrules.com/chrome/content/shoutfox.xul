@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://shoutfox/skin/shoutfox.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://shoutfox/locale/shoutfox.dtd">
+<overlay id="shoutfox-overlay"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script src="shoutfox.js" />
+
+    <toolbox id="navigator-toolbox">
+        <tooltip id="shoutfox-tooltip" orient="vertical">
+            <description id="shoutfox-status-tooltip" value="ShoutFox"/>
+        </tooltip>
+    </toolbox>
+
+    <statusbar id="status-bar">
+        <statusbarpanel id="shoutfox-statusbar-button"
+		    class="statusbarpanel-menu-iconic"
+		    context="shoutfox-main-menupopup"
+		    ondblclick="shoutFox.openDashboard()"
+		    onclick="shoutFox.togglePanel(event)"
+		    tooltip="shoutfox-tooltip">
+            <label id="shoutfox-statusbar-text" style="margin: 1px" value="0"/>
+        </statusbarpanel>
+
+        <popupset id="shoutfox-popupset">
+            <menupopup id="shoutfox-main-menupopup">
+                <menuitem id="shoutfox-menuitem-togglepopup" label="&shoutfox.showpopup;" oncommand="shoutFox.togglePopup()" type="checkbox" checked="true"/>
+                <menuitem id="shoutfox-menuitem-update" label="&shoutfox.update;" oncommand="shoutFox.updatePosts()" />
+                <menuitem id="shoutfox-menuitem-markread" label="&shoutfox.markAllAsRead;" oncommand="shoutFox.markAllRead()" />
+                <menuseparator/>
+                <menuitem id="shoutfox-menuitem-preference" label="&shoutfox.preference;" oncommand="shoutFox.showPreferences()" />
+            </menupopup>
+        </popupset>
+    </statusbar>
+</overlay>

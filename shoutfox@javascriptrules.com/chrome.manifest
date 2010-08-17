@@ -1,0 +1,4 @@
+content shoutfox chrome/content/
+overlay chrome://browser/content/browser.xul chrome://shoutfox/content/shoutfox.xul
+skin shoutfox classic/1.0 chrome/skin/
+locale shoutfox en-US chrome/locale/en-US/
